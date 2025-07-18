@@ -1,1 +1,35 @@
-<p>product-details works!</p>
+
+<div class="navbar bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1 text-white" style="color: white;">E-Commerce Website</a>
+        <button  routerLink="/" class="btn btn-warning">Back</button>
+    </div>
+</div>
+<div class="container">
+    <div class="row product-details">
+        <div class="col-sm-3">
+            <img class="product-img" src="{{productData?.images[0]}}" alt="">
+            <div class="mt-3 text-center">
+                <button class="btn btn-primary">Buy Now</button>&nbsp;
+                 <button class="btn btn-success">Add to Cart</button>
+                 <button class="btn btn-success">Remove Cart</button>
+            </div>
+        </div>
+         <div class="col-sm-8">
+        <div>
+            <h1>{{productData?.title}}</h1>
+            <P style="color: green;">Special Price</P>
+            <h3>Price:&nbsp; $ {{productData?.price}}</h3>
+            <strong>Catagery:&nbsp;{{productData?.category}}</strong>
+            <br>
+            <strong>Description:&nbsp; 
+                <p>{{productData?.description}}</p>           
+            </strong>
+            <P style="color: green;">Discount: {{productData?.discountPercentage}}%</P>
+            <br>
+            <strong>Stocks: {{productData?.stock}} Units left</strong>
+        </div>
+    </div>
+    </div>
+   
+</div>

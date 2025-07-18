@@ -13,7 +13,7 @@
             <div class="card mt-2">
                 <div class="card-body">
                     <div class="card-img-action">
-                        <img routerLink="/product-details"  src="{{item.thumbnail}}" class="card-img img-fluid" alt="">
+                        <img routerLink='/product-details/{{item.id}}' src="{{item.thumbnail}}" class="card-img img-fluid" alt="">
                     </div>
                 </div>
                 <div class="card-body bg-light text-center">
@@ -21,7 +21,7 @@
                        <a href=""> {{item.title}}</a>
                     </h6>
                     <h3 class="mb-0 font-weight-semibold">$  {{item.price}}</h3>
-                    <button [routerLink]="['/product-details']" class="btn btn-sm btn-dark mt-2"> <i class=" fa fa-solid fa-info mr-2" ></i>&nbsp;  View detaile</button>
+                    <button routerLink='/product-details/{{item.id}}' class="btn btn-sm btn-dark mt-2"> <i class=" fa fa-solid fa-info mr-2" ></i>&nbsp;  View detaile</button>
                     <button class="btn btn-sm btn-warning mt-2"> <i class=" fa fa-solid fa-cart-plus mr-2"></i>&nbsp; Add to cart</button>
                  
                 </div>

@@ -12,3 +12,5 @@ import { ProductViewComponent } from './product-view/product-view.component';
 export class AppComponent {
   title = 'ecommerce';
 }
+
+export { ProductViewComponent };

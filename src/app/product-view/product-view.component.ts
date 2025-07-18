@@ -27,10 +27,10 @@ export class ProductViewComponent implements OnInit {
   }
 
   displayProduct(){
-    this.apiService.getProduct().subscribe( res=>{
-    this.data=res;    
+    this.apiService.getProduct('1', null).subscribe( res=>{
+      this.data=res;    
     })
-    console.log(this.data);
+    // console.log(this.data);
   }
 }
 
