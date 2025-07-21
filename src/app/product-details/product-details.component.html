@@ -1,22 +1,23 @@
-
+<!-- 
 <div class="navbar bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand mb-0 h1 text-white" style="color: white;">E-Commerce Website</a>
         <button  routerLink="/" class="btn btn-warning">Back</button>
     </div>
-</div>
+</div> -->
 <div class="container">
     <div class="row product-details">
         <div class="col-sm-3">
             <img class="product-img" src="{{productData?.images[0]}}" alt="">
             <div class="mt-3 text-center">
                 <button class="btn btn-primary">Buy Now</button>&nbsp;
-                 <button class="btn btn-success">Add to Cart</button>
-                 <button class="btn btn-success">Remove Cart</button>
+                <button class="btn btn-sm btn-warning mt-2" (click)="addCart(productData)" *ngIf="showAdd">&nbsp; Add to cart</button>
+                <button class="btn btn-sm btn-danger mt-2" (click)="removeCart(productData)" *ngIf="showRemove">&nbsp; Remove cart</button>
             </div>
         </div>
          <div class="col-sm-8">
         <div>
+            <button  routerLink="/" class="btn btn-warning">Back</button>
             <h1>{{productData?.title}}</h1>
             <P style="color: green;">Special Price</P>
             <h3>Price:&nbsp; $ {{productData?.price}}</h3>
